@@ -1,0 +1,228 @@
+@import "lib/default.less";
+
+/* colors */
+
+/* font-size */
+
+/* animation */
+
+/* other */
+.extend_button {
+	display: inline-block;
+	text-align: center;
+}
+
+/* default styles */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: texgyreadventorregular, Arial, sans-serif;
+	font-size: @text_size;
+}
+body {
+	.clear_block;
+	min-width: 1280px;
+}
+
+/* styles */
+h1 {
+	margin: 20px 0px;
+}
+#video_player {
+	float: left;
+	width: 33%;
+	height: 300px;
+	margin: 50px 15px 10px 0;
+}
+.main {
+	float: left;
+	position: relative;
+	width: 55%;
+	
+	.text_buttons {
+		.clear_block;
+	
+		margin: 10px 0;
+		
+		> a {
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+		
+		.text_add {
+			float: left;
+			height: 20px;
+			line-height: 20px;
+			padding: 5px 15px;
+		}
+		
+		.text_learn {
+			float: right;
+		}
+		
+		.text_analiz {
+			float: right;
+		}
+	}
+	
+	.textarea {
+		position: relative;
+		width: 98%;
+		height: 150px;
+		padding: 5px 1%;
+		border: solid 1px @color_gray_border;
+		overflow: auto;
+		
+		span {
+			cursor: pointer;
+		}
+		
+		.red {
+			color: red;
+		}
+		.green {
+			font-style: normal;
+			background-color: #B3F4BD;
+		}
+		.light {
+			font-style: normal;
+			background-color: rgb(237, 173, 217);
+		}
+        .word {
+            &:hover {
+                color: #027614;
+                font-weight: bold;
+                text-decoration: overline;
+                
+                &:before {
+                    
+                    font-size: 20px;
+                    line-height: 14px;
+                    color: rgb(237, 173, 217);
+                }
+            }
+        }
+        
+        counter-reset: present_slides;
+        
+        .present_slide {
+            text-align: justify;
+        
+            &:before {
+                counter-increment: present_slides; /* Указываем идентификатор счетчика */
+                content: "Слайд " counter(present_slides) ". "; /* Выводим текст перед содержимым тега <h2> */
+                font-size: 20px;
+                line-height: 14px;
+                color: rgb(237, 173, 217);
+            }
+            
+            .present_slide_del {
+                color: red;
+                margin: 5px;
+                cursor: pointer;
+                
+                &:hover {
+                    &:after {
+                        content: "далить";
+                        //margin: 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+	}
+	.window_input {
+		position: relative;
+		
+		.clear_block;
+		
+		input.sub_input {
+			width: 83%;
+			padding: 0 5px;
+			font-size: @text_size;
+			line-height: @text_size*2;
+			background-color: #DEF7E2;
+		}
+		
+		input.sub_input_save, input.present_save {
+			width: 7%;
+			height: 24px;
+			border: solid 1px @color_black;
+			background-color: #A9BFF7;
+			cursor: pointer;
+		}
+		input.sub_input_clear {
+			width: 7%;
+			height: 24px;
+			border: solid 1px @color_black;
+			cursor: pointer;
+			background-color: #c88dc3;
+		}
+	}
+	
+	.present_buttons {
+		margin: 10px 0;
+
+		.present_add {
+			float: left;
+			height: 20px;
+			line-height: 20px;
+			padding: 5px 15px;
+		}
+		
+		.present_move {
+			float: right;
+            margin-left: 3px;
+			margin-right: 3px;
+		}
+        
+        .present_finish {
+			float: right;
+            margin-left: 3px;
+			margin-right: 3px;
+		}
+	}
+	
+	.loader {
+		display: none;
+		float: left;
+		margin: 1px 3px;
+	}
+	
+	.status_message {
+		display: block;
+		float: left;
+		margin: 5px 15px;
+		
+		&.success {
+			color: green;
+		}
+		
+		&.error {
+			color: red;
+		}
+	}
+}
+.sidebar_right {
+	float: left;
+	width: 8%;
+	margin-left: 1%;
+	padding-top: 50px;
+	
+	ul {
+		list-style-type: none;
+	}
+	
+	.extend_button {
+		margin: 0 0 10px;
+	}
+	
+	.advice_word {
+		cursor: pointer;
+		
+		&:hover {
+			
+		}
+	}
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+		<meta content="" name="description" />
+		<meta content="" name="keywords" />
+		
+		<link rel="stylesheet" type="text/css" href="css/fonts/fonts.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+		<link rel="stylesheet/less" type="text/css" href="css/style.less" />
+		
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<link rel="stylesheet" href="/css/ie.css"> 
+		<![endif]-->
+		
+		<script type="text/javascript" src="js/lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/lib/less.min.js"></script>
+		<script type="text/javascript" src="js/lib/uppod.js"></script>
+		<script type="text/javascript" src="js/lib/uppod_api.js"></script>
+		<script type="text/javascript" src="js/lib/imResize.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		
+		<title></title>
+	</head>
+	<body>
+		<div class="wrapper_into">
+			<div id="video_player">
+			</div>
+			<h1>Обработка текста субтитров</h1>
+			<div class="main">
+				<div class="text_buttons">
+					<input class="extend_button text_add" type="file">
+					<img src="../img/loader.gif" class="loader">
+					<div class="status_message"></div>
+					<a href="javascript:" class="extend_button text_learn">Learn</a>
+					<a href="javascript:" class="extend_button text_analiz">Analysis</a>
+				</div>
+				<p class="textarea"></p>
+				<div class="window_input">
+					<input type="text" class="sub_input" value="">
+					<input type="button" class="sub_input_save" value="Save" disabled="disabled">
+					<input type="button" class="sub_input_clear" value="Clear">
+				</div>
+				<div class="present_buttons">
+					<input class="extend_button present_add" type="file" disabled="disabled">
+                    <input type="button" class="extend_button present_finish" disabled="disabled" value="Finish">
+                    <input type="button" class="extend_button present_move" disabled="disabled" value="Add Text">
+				</div>
+			</div>
+			<div class="sidebar_right">
+				<h3>Подсказки</h3>
+				<ul class="advice_words">
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

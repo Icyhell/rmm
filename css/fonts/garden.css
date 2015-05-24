@@ -1,0 +1,11 @@
+
+@font-face {
+    font-family: 'gardensc';
+    src: url('gardensc_03_1.eot');
+    src: url('gardensc_03_1.eot?#iefix') format('embedded-opentype'),
+         url('gardensc_03_1.woff') format('woff'),
+         url('gardensc_03_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
